@@ -4,6 +4,7 @@ import 'package:delivery_app/services/products_api.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:delivery_app/helpers/bottom_navbar_bloc.dart';
 import 'restaurants_screen.dart';
+import 'package:delivery_app/screens/cart_screen.dart';
 
 class UserHome extends StatefulWidget {
   @override
@@ -70,14 +71,7 @@ class _UserHome extends State<UserHome> {
           case NavBarItem.HOME:
             return _homeScreen();
           case NavBarItem.CART:
-            return Container(
-              child: Center(
-                child: Text(
-                  'Cart Screen',
-                  style: TextStyle(fontSize: 40.0),
-                ),
-              ),
-            );
+            return CartScreen();
         }
       },
     );
